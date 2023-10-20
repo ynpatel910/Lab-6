@@ -9,7 +9,14 @@ def encoder(message):
 
 # Decode the password
 def decoder(message):
-    pass
+    result = ''
+    for digit in message:
+        digit = int(digit) - 3
+        if digit < 0:
+            digit += 10
+        new_digit = str(digit)
+        result += new_digit
+    return result
 
 
 # Main loop which shows Menu
